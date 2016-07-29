@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="QualityEclipse"
+            id="com.qualityeclipse.favorites">
+      </category>
+      <view
+            name="Favorites"
+            icon="icons/sample.gif"
+            category="com.qualityeclipse.favorites"
+            class="com.qualityeclipse.favorites.views.FavoritesView"
+            id="com.qualityeclipse.favorites.views.FavoritesView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.qualityeclipse.favorites.commands.category"
+            name="Favorites">
+      </category>
+      <command
+            category="Favorites"
+            categoryId="com.qualityeclipse.favorites.commands.category"
+            description="Opens Favorites View If not Open"
+            id="com.qualityeclipse.favorites.command3"
+            name="Open Favorites View">
+      </command>
+      <command
+            category="Favorites"
+            categoryId="com.qualityeclipse.favorites.commands.category"
+            description="Add selcted itmes to favorites view"
+            id="com.qualityeclipse.favorites.commands.add"
+            name="Add">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="com.qualityeclipse.favorites.menus.favoritesMenu"
+               label="Favorites"
+               mnemonic="V">
+            <command
+                  commandId="com.qualityeclipse.favorites.commands.openView"
+                  icon="icons/sample.gif"
+                  id="cm.qualityeclipse.favorites.menus.openFavorites.openView"
+                  label="Open Favorites View"
+                  mnemonic="O"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
