@@ -48,13 +48,27 @@
                mnemonic="V">
             <command
                   commandId="com.qualityeclipse.favorites.commands.openView"
-                  icon="icons/sample.gif"
+                  icon="icons/fav.png"
                   id="cm.qualityeclipse.favorites.menus.openFavorites.openView"
                   label="Open Favorites View"
                   mnemonic="O"
                   style="push">
             </command>
          </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.qualityeclipse.favorites.toolbars.main">
+            <command
+                  commandId="com.qualityeclipse.favorites.commands.openView"
+                  icon="icons/fav.png"
+                  id="com.qualityeclipse.favorites.toolbars.openFavoritesView"
+                  style="push"
+                  tooltip="Open Fav View">
+            </command>
+         </toolbar>
       </menuContribution>
    </extension>
 
